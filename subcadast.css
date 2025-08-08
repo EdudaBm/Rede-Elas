@@ -131,21 +131,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   body {
     margin: 0;
     padding: 0;
@@ -236,4 +221,5 @@ body {
   
   .links a:hover {
     text-decoration: underline;
+
   }

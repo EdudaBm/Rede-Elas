@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>REDE ELAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <link rel="st" href="rede2.html">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="logo.png" alt="Logo Rede Elas">
+    <h1>Rede Elas</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Login" required>
+      <input type="password" id="password" placeholder="Senha" required>
+      <button  class="btn"><a href="perfil.html" class="btn">Entrar</a></button>
+      
+
+     
+
+
+   
+
+
+    </form>
+    <div class="links">
+     
+      <a href="subcadast.html">Criar um cadastro</a> <!-- Link para a página "subcadast.html" -->
+     
+      <a href="#">AtendimentoGeral</a>
+    </div>
+    <div class="footer">© 2025 REDE ELAS</div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user === 'admin' && pass === '1234') {
+
+      } else {
+        alert('Login inválido! crie um login');
+      }
+    });
+  </script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Botão Coração</title>
+  <style>
+  
+    
+
+  </style>
+</head>
+<body>
+
+  <!-- Botão coração fixado no canto inferior esquerdo -->
+  <div class="heart-container">
+    <a href="botaodeemergen.html">
+      <button class="heart-button" aria-label="Ir para outra página"></button>
+    </a>
+  </div>
+
+</body>
+</html>
+</body>
+</html>

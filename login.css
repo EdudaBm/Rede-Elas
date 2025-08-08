@@ -86,22 +86,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   body {
     margin: 0;
     padding: 0;
@@ -239,4 +223,5 @@
     .heart-button:hover::before,
     .heart-button:hover::after {
       background:  rgb(147, 99, 139);
+
     }

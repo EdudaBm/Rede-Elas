@@ -10,6 +10,18 @@ A Rede Elas foi desenvolvida para oferecer um espaço seguro, anônimo e confiá
 - Acessar informações importantes sobre direitos e recursos
 - Conectar-se com uma comunidade de apoio
 
+<<<<<<< HEAD
+=======
+## 👥 Integrantes
+
+- Eduarda Beato 12303038@aluno.cotemig.com.br
+- Fellipe Marzano 12301779@aluno.cotemig.com.br
+- Gabriela Magalhães 12302015@aluno.cotemig.com.br
+- Kaue Gibson 12300756@aluno.cotemig.com.br
+- Lucas Lima 12302287@aluno.cotemig.com.br
+- Maria Eduarda Freitas 12301698@aluno.cotemig.com.br
+
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
 ## ✨ Características
 
 ### 🔒 Segurança e Privacidade
@@ -179,4 +191,8 @@ Agradecemos a todas as mulheres que compartilharam suas histórias e a todas as 
 
 ---
 
+<<<<<<< HEAD
 **Lembre-se**: Você não está sozinha. A Rede Elas está aqui para te apoiar. 💙
+=======
+**Lembre-se**: Você não está sozinha. A Rede Elas está aqui para te apoiar. 💙
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3

@@ -3,6 +3,43 @@
 
 namespace Models;
 
+<<<<<<< HEAD
+use Repositories\RepositoryManager;
+
+class ChatRoom {
+    private $chatRoomRepo;
+    
+    public function __construct() {
+        $this->chatRoomRepo = RepositoryManager::getInstance()->chatRoom();
+    }
+    
+    public function create($userId, $userName) {
+        return $this->chatRoomRepo->createChatRoom($userId, $userName);
+    }
+    
+    public function findById($id) {
+        return $this->chatRoomRepo->findById($id);
+    }
+    
+    public function getByUserId($userId) {
+        return $this->chatRoomRepo->getByUserId($userId);
+    }
+    
+    public function getWaiting() {
+        return $this->chatRoomRepo->getWaiting();
+    }
+    
+    public function getActive() {
+        return $this->chatRoomRepo->getActive();
+    }
+    
+    public function assignVolunteer($id, $volunteerId, $volunteerName) {
+        return $this->chatRoomRepo->assignVolunteer($id, $volunteerId, $volunteerName);
+    }
+    
+    public function close($id) {
+        return $this->chatRoomRepo->close($id);
+=======
 class ChatRoom {
     private $db;
     
@@ -66,5 +103,6 @@ class ChatRoom {
     public function close($id) {
         $stmt = $this->db->prepare("UPDATE chat_rooms SET status = 'closed' WHERE id = ?");
         return $stmt->execute([$id]);
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
     }
 }

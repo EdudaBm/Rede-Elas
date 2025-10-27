@@ -28,7 +28,11 @@ class Controller {
     }
     
     protected function requireAdmin() {
+<<<<<<< HEAD
+        if (!isset($_SESSION['user_id']) || ($_SESSION['user_role'] ?? '') !== 'admin') {
+=======
         if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
             $this->redirect('/');
         }
     }
@@ -38,11 +42,50 @@ class Controller {
             return null;
         }
         
+<<<<<<< HEAD
+        // Garantir que as variáveis de sessão existam
+        if (!isset($_SESSION['username'])) {
+            $_SESSION['username'] = '';
+        }
+        if (!isset($_SESSION['user_role'])) {
+            $_SESSION['user_role'] = 'user';
+        }
+        if (!isset($_SESSION['is_anonymous'])) {
+            $_SESSION['is_anonymous'] = false;
+        }
+        
+=======
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
         return [
             'id' => $_SESSION['user_id'],
             'username' => $_SESSION['username'],
             'role' => $_SESSION['user_role'],
+<<<<<<< HEAD
+            'is_anonymous' => $_SESSION['is_anonymous']
+        ];
+    }
+    
+    protected function validateUserSession() {
+        $user = $this->getCurrentUser();
+        if (!$user) {
+            return false;
+        }
+        
+        // Verificar se o usuário existe no banco de dados
+        $userModel = new \Models\User();
+        $existingUser = $userModel->findById($user['id']);
+        
+        if (!$existingUser) {
+            // Usuário não existe mais, limpar sessão
+            session_destroy();
+            return false;
+        }
+        
+        return true;
+    }
+=======
             'is_anonymous' => $_SESSION['is_anonymous'] ?? false
         ];
     }
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
 }

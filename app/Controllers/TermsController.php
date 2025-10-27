@@ -11,3 +11,7 @@ class TermsController extends Controller {
         $this->view('terms/index');
     }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3

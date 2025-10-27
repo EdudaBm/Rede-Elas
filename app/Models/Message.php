@@ -3,6 +3,27 @@
 
 namespace Models;
 
+<<<<<<< HEAD
+use Repositories\RepositoryManager;
+
+class Message {
+    private $messageRepo;
+    
+    public function __construct() {
+        $this->messageRepo = RepositoryManager::getInstance()->message();
+    }
+    
+    public function create($chatRoomId, $senderId, $senderName, $senderRole, $content) {
+        return $this->messageRepo->createMessage($chatRoomId, $senderId, $senderName, $senderRole, $content);
+    }
+    
+    public function getByChatRoom($chatRoomId) {
+        return $this->messageRepo->getByChatRoom($chatRoomId);
+    }
+    
+    public function getByChatRoomSince($chatRoomId, $sinceId = 0) {
+        return $this->messageRepo->getByChatRoomSince($chatRoomId, $sinceId);
+=======
 class Message {
     private $db;
     
@@ -38,5 +59,6 @@ class Message {
         ");
         $stmt->execute([$chatRoomId, $sinceId]);
         return $stmt->fetchAll();
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
     }
 }

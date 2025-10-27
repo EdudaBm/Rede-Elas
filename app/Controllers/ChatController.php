@@ -6,14 +6,26 @@ namespace Controllers;
 use Core\Controller;
 use Models\ChatRoom;
 use Models\Message;
+<<<<<<< HEAD
+use Models\User;
+=======
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
 
 class ChatController extends Controller {
     private $chatRoomModel;
     private $messageModel;
+<<<<<<< HEAD
+    private $userModel;
+=======
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
     
     public function __construct() {
         $this->chatRoomModel = new ChatRoom();
         $this->messageModel = new Message();
+<<<<<<< HEAD
+        $this->userModel = new User();
+=======
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
     }
     
     public function index() {
@@ -59,8 +71,19 @@ class ChatController extends Controller {
     
     public function create() {
         $this->requireAuth();
+<<<<<<< HEAD
+        
+        // Validar se a sessão do usuário é válida
+        if (!$this->validateUserSession()) {
+            $_SESSION['error'] = 'Sessão inválida. Faça login novamente.';
+            $this->redirect('/login');
+        }
+        
+        $user = $this->getCurrentUser();
+=======
         $user = $this->getCurrentUser();
         
+>>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
         $chatId = $this->chatRoomModel->create($user['id'], $user['username']);
         $this->redirect("/conversa/{$chatId}");
     }

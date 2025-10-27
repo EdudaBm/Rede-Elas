@@ -21,7 +21,3 @@ SET @sql = IF(@column_exists = 0,
 PREPARE stmt FROM @sql;
 EXECUTE stmt;
 DEALLOCATE PREPARE stmt;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3

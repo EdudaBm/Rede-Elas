@@ -16,10 +16,7 @@ spl_autoload_register(function ($class) {
 
 // Incluir configurações
 require_once BASE_PATH . '/config/database.php';
-<<<<<<< HEAD
 require_once BASE_PATH . '/app/Repositories/autoload.php';
-=======
->>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
 require_once BASE_PATH . '/app/Core/Router.php';
 require_once BASE_PATH . '/app/Core/Controller.php';
 

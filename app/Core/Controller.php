@@ -28,11 +28,7 @@ class Controller {
     }
     
     protected function requireAdmin() {
-<<<<<<< HEAD
         if (!isset($_SESSION['user_id']) || ($_SESSION['user_role'] ?? '') !== 'admin') {
-=======
-        if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
->>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
             $this->redirect('/');
         }
     }
@@ -42,7 +38,6 @@ class Controller {
             return null;
         }
         
-<<<<<<< HEAD
         // Garantir que as variáveis de sessão existam
         if (!isset($_SESSION['username'])) {
             $_SESSION['username'] = '';
@@ -54,13 +49,10 @@ class Controller {
             $_SESSION['is_anonymous'] = false;
         }
         
-=======
->>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
         return [
             'id' => $_SESSION['user_id'],
             'username' => $_SESSION['username'],
             'role' => $_SESSION['user_role'],
-<<<<<<< HEAD
             'is_anonymous' => $_SESSION['is_anonymous']
         ];
     }
@@ -83,9 +75,4 @@ class Controller {
         
         return true;
     }
-=======
-            'is_anonymous' => $_SESSION['is_anonymous'] ?? false
-        ];
-    }
->>>>>>> 4a84a3764cdeb97fa46841006fd33cb274d56da3
 }
